@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fantasy Heights home page</title>
+  <meta charset="utf-8">
+  <title>Fantasy Heights</title>
+  <style type="text/css" id="gwd-text-style">
+    p {
+      margin: 0px;
+      cursor: default;
+    }
+    h1 {
+      margin: 0px;
+    }
+    h2 {
+      margin: 0px;
+      line-height: 3;
+    }
+    h3 {
+      margin: 0px;
+    }
+    header {
+      background: rgb(8, 100, 153);
+    }
+    #navbar {}
+    nav {
+      text-align: left;
+      font-family: sans-serif;
+    }
+    nav ul {
+      margin: 10px;
+      padding: 10px;
+      list-style: none;
+    }
+    nav li {
+      display: inline-block;
+      margin-left: 40px;
+    }
+    #fantasy-heights {
+      text-align: center;
+      font-family: courier, sans-serif;
+      color: rgb(0, 179, 255);
+      font-style: italic;
+      font-size: 30px;
+      border-bottom: 2px solid rgb(0, 15, 116);
+    }
+    #about-us-txt {
+      text-decoration: none;
+      font-size: 0.5em;
+      color: rgb(2, 2, 2);
+    }
+    #about-us-txt:hover {
+      border-bottom: none;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+    }
+    a:hover {
+      color: yellow;
+      border-bottom: 1px dotted yellow;
+    }
+    a:active {
+      color: black;
+    }
+    #no-giro {
+      font-size: 18px;
+    }
+    #no-giro:hover {
+      margin-top: -100px;
+      font-size: 0em;
+    }
+    #no-giro:hover::after {
+      content: attr(data-hover);
+      font-size: 18px;
+      cursor: not-allowed;
+    }
+    #no-giro:active {
+      color: red;
+    }
+    .login {}
+    .stats {
+      text-align: center;
+      background-color: grey;
+      opacity: 0.5;
+      font-family: "Arial Black", Gadget, sans-serif;
+      margin: 120px;
+      border-radius: 80px;
+    }
+    .stats table {
+      margin: auto;
+    }
+    #milchig {
+      color: aqua;
+    }
+    #milchig:hover {
+      cursor: url("http://cur.cursors-4u.net/food/foo-2/foo169.cur"), auto;
+      color: blue;
+    }
+    #milchig-table {
+      color: aqua;
+    }
+    #milchig-table:hover {
+      opacity: 0.9;
+      color: blue;
+    }
+    #fleshig {
+      color: pink;
+    }
+    #fleshig:hover {
+      cursor: url("data:image/x-icon;base64,AAACAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAB/qRABetzwAAAP8AFmehAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIiIiIiAAAAAAAAAAACIiMiIiIiIiIAAAAAAAAAIiIjIiIiMiIiIAAAAAAAACIjIyIiMjIiIiAAAAAAAAAiIyMiIjIyIyIgAAAAAAAAIzMzMzMzMzMzIAAAAAAAAAMzMzMzMzMzMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREREREREREAAAAAAAAAEREREREREREREAAAAAAAABAAAAAAAAAAABAAAAAAAAAARERERERERERAAAAAAAAABEAAAAAAAAAARAAAAAAAAAAIiIiIiIiIiAAAAAAAAAAIiIiIiIiIiIiIAAAAAAAACIiIiIiIiIiIiAAAAAAAAAiICIiICIiICIgAAAAAAAAIiIiIiIiIiIiIAAAAAAAACIiIiIiIiIiIiAAAAAAAAACIiIgIiAiIiIAAAAAAAAAAiICIiIiIgIiAAAAAAAAAAAiIiIgIiIiIAAAAAAAAAAAAiICIiICIgAAAAAAAAAAAAACIiIiIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAAAAAABEMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD////////////gAP//gAA//wAAH/4AAA/+AAAP/gAAD/4AAA//AAAf/gAAD/8AAB/+AAAP/gAAD/4AAA/+AAAP/wAAH/4AAA/+AAAP/gAAD/4AAA/+AAAP/wAAH/8AAB//gAA//8AAf3/gAP8/+AP/H////w////8H////A////w=="), auto;
+      color: red;
+    }
+    #fleshig-table {
+      color: pink;
+    }
+    #fleshig-table:hover {
+      opacity: 0.9;
+      color: red;
+    }
+    #pareve {
+      color: lime;
+    }
+    #pareve:hover {
+      cursor: url("data:image/x-icon;base64,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"), auto;
+      color: green;
+      opacity: 0.9;
+    }
+    #pareve-table {
+      color: lime;
+    }
+    #pareve-table:hover {
+      opacity: 0.9;
+      color: green;
+    }
+    .team-link {}
+    .team-link:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+  <style type="text/css">
+    body {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      background-image: url("https://cdn.wallpapersafari.com/45/75/r2HRgQ.jpg");
+      background-repeat: no-repeat;
+    }
+    td {
+      text-align: center;
+    }
+    th {
+      line-height: 3;
+      text-decoration: underline;
+    }
+    table {
+      table-layout: fixed;
+      width: 60%;
+    }
+    .about-us {
+      font-size: 0.7em;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="htmlNoPages">
+  <header>
+    <div id="navbar">
+      <nav>
+        <p id="fantasy-heights" alt="logo">
+          Fantasy Heights <a id="about-us-txt" href="#about-us"> about us</a>
+        </p>
+        <ul>
+          <li><a href="">HOME</a>
+          </li>
+          <li>
+            <a id="no-giro" data-hover="NO GIROS allowed" href="">TRADING CENTER</a>
+          </li>
+          <li>
+            <a href="">NEWS</a>
+          </li>
+          <li>
+            <a href="">HISTORY</a>
+          </li>
+          <li>
+            <a href="">DRAFTS</a>
+          </li>
+          <li>
+            <a href="">TROPHIES</a>
+          </li>
+          <li>
+            <login class="login" href="">Login</login>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <p><br>
+    <br>
+    
+  </p>
+  <div class="stats">
+    <!--milchig-->
+    <div id="milchig">
+      <h2>
+    Milchig
+  </h2>
+      <table>
+        <thead>
+          <tr id="milchig-table">
+            <th>Rank</th>
+            <th>Team</th>
+            <th>W-L-T</th>
+            <th>Pts</th>
+            <th>Waiver</th>
+          </tr>
+        </thead>
+        <tbody id="milchig-table">
+          <tr>
+            <td>3</td>
+            <td class="team-link" href="">Murderers row</td>
+            <td>2-1-0</td>
+            <td>3343.30</td>
+            <td>9</td>
+          </tr>
+        </tbody>
+        <tbody id="milchig-table">
+          <tr>
+            <td>6</td>
+            <td class="team-link" href="">Fear The Beard</td>
+            <td>1-2-0</td>
+            <td>3401.80</td>
+            <td>11</td>
+          </tr>
+        </tbody>
+        <tbody id="milchig-table">
+          <tr>
+            <td>8</td>
+            <td class="team-link" href="">The penetrator</td>
+            <td>1-2-0</td>
+            <td>3158.25</td>
+            <td>6</td>
+          </tr>
+        </tbody>
+        <tbody id="milchig-table">
+          <tr>
+            <td>12</td>
+            <td class="team-link" href="">Slytherin🧙‍♂️</td>
+            <td>0-3-0</td>
+            <td>3154.95</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--fleshig-->
+    <div id="fleshig">
+      <h2>
+    Fleshig
+  </h2>
+      <table>
+        <thead>
+          <tr id="fleshig-table">
+            <th>Rank</th>
+            <th>Team</th>
+            <th>W-L-T</th>
+            <th>Pts</th>
+            <th>Waiver</th>
+          </tr>
+        </thead>
+        <tbody id="fleshig-table">
+          <tr>
+            <td>2</td>
+            <td class="team-link" href="">Plumbus</td>
+            <td>3-0-0</td>
+            <td>3263.90</td>
+            <td>4</td>
+          </tr>
+        </tbody>
+        <tbody id="fleshig-table">
+          <tr>
+            <td>5</td>
+            <td class="team-link" href="">George DUB bush</td>
+            <td>2-1-0</td>
+            <td>3197.20</td>
+            <td>7</td>
+          </tr>
+        </tbody>
+        <tbody id="fleshig-table">
+          <tr>
+            <td>10</td>
+            <td class="team-link" href="">Vadim's Team</td>
+            <td>1-2-0</td>
+            <td>3053.95</td>
+            <td>5</td>
+          </tr>
+        </tbody>
+        <tbody id="fleshig-table">
+          <tr>
+            <td>11</td>
+            <td class="team-link" href="">ROAD TO THE TROPHY🏆</td>
+            <td>1-2-0</td>
+            <td>2955.85</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--pareve-->
+    <div id="pareve">
+      <h2>
+    Pareve
+  </h2>
+      <table>
+        <thead>
+          <tr id="pareve-table">
+            <th>Rank</th>
+            <th>Team</th>
+            <th>W-L-T</th>
+            <th>Pts</th>
+            <th>Waiver</th>
+          </tr>
+        </thead>
+        <tbody id="pareve-table">
+          <tr>
+            <td>1</td>
+            <td class="team-link" href="">mendel's Team</td>
+            <td>3-0-0</td>
+            <td>3741.30</td>
+            <td>12</td>
+          </tr>
+        </tbody>
+        <tbody id="pareve-table">
+          <tr>
+            <td>4</td>
+            <td class="team-link" href="">John Wick</td>
+            <td>2-1-0</td>
+            <td>3459.55</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+        <tbody id="pareve-table">
+          <tr>
+            <td>7</td>
+            <td class="team-link" href="">Blue Steel</td>
+            <td>1-2-0</td>
+            <td>3216.00</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+        <tbody id="pareve-table">
+          <tr>
+            <td>9</td>
+            <td class="team-link" href="">Mr.poopybutthole</td>
+            <td>1-2-0</td>
+            <td>3157.05</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th><br>
+              
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><br>
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="about-us">
+    <p id="about-us">
+      ©fantasy-heights 2015-16<br>
+      no. 1 fantasy basketball league in the world<br>
+      <br>
+      <br>
+      
+    </p>
+  </div>
+</body>
+
+</html>
